@@ -11,10 +11,12 @@ reddit = praw.Reddit(client_id="GRpmJ57fuNLklmJkXiHUQg",
 
 # Class to hold scrape results
 class ScrapeResult:
-    def __init__(self, url, title, selfText):
+    def __init__(self, url, title, selfText, username):
         self.url = url
         self.title = title
         self.selfText = selfText
+        self.username = username
+
 
 # Check if a string is in a line of a text file
 def checkStringInFile(filePath: str, specificString: str):
@@ -37,6 +39,8 @@ def scrape(subreddit: str):
     with open("UsedUrls.txt", "a") as usedUrls:
         usedUrls.write(submission.url + "\n")
 
-    return ScrapeResult(url, submission.title, submission.selftext)
+    username = submission.author.name if submission.author else "Unknown"
+    
+    return ScrapeResult(url, submission.title, submission.selftext, username)
 
 
