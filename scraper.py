@@ -1,8 +1,11 @@
 import praw
 import random
+from dotenv import load_dotenv
+import os
 
-# PROBABLY NOT BEST WAY TO STORE??
+# MOVE TO .ENV
 # Initialize the Reddit instance
+
 reddit = praw.Reddit(client_id="GRpmJ57fuNLklmJkXiHUQg",
                      client_secret="VTIh6wY_HGnCIKsysgy8CYwgrFWFVw",
                      username="GrapefruitFront8544",

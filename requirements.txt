@@ -3,3 +3,5 @@ praw
 random
 openai
 PIL
+python-dotenv
+os

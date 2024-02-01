@@ -1,15 +1,21 @@
 from pathlib import Path
 from openai import OpenAI
+from dotenv import load_dotenv
+import os
 
-client = OpenAI(api_key = "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")
 
 
+load_dotenv()
 
+# Access the API key
+api_key = os.getenv("OPENAI_API_KEY")
+
+# Initialize the OpenAI client with the API key
+client = OpenAI(api_key=api_key)
 
 #outputs mp3 of text to speech
 # voice types: Alloy, Echo, Fable, Onyx, Nova, Shimmer
-def textToSpeech(text: str, voice: str):
-    speech_file_path = "speech.mp3"
+def textToSpeech(text: str, voice: str, filename: str):
 
     response = client.audio.speech.create(
     model="tts-1",
@@ -17,7 +23,5 @@ def textToSpeech(text: str, voice: str):
     input = text
     )
 
-    response.stream_to_file(speech_file_path)
+    response.stream_to_file(filename)
 
-
-textToSpeech("hello there, my name is andrew", "alloy")
