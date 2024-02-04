@@ -1,0 +1,40 @@
+2
+0,00,00 --> 0,00,02
+I stole an air purifier from Walmart
+
+3
+0,00,02 --> 0,00,06
+Even the small ones for a bedroom are really expensive
+
+4
+0,00,06 --> 0,00,11
+My dog was born with heart problems and he just turned 9
+
+5
+0,00,11 --> 0,00,19
+He’s been on medicine for over almost 2 years now and they’ve upped his medicine twice in a year
+
+6
+0,00,19 --> 0,00,22
+His cough recently has gotten really bad
+
+7
+0,00,22 --> 0,00,26
+I have an appointment for the vet in like 2 weeks
+
+8
+0,00,26 --> 0,00,38
+I looked up some ways to help his cough (besides all the medicine he’s already on) and to rid the lungs of fluid is to improve the over all air quality
+
+9
+0,00,38 --> 0,00,46
+So I already have a small humidifier to help loosen the mucus but I needed an air purifier
+
+10
+0,00,46 --> 0,00,56
+I just wanted a small one for my bedroom to see if it helps but the smallest one I could find at Wally World was like $70
+
+11
+0,00,56 --> 0,01,09
+I’ve been feeling really guilty but his cough has just been getting worse and I can’t move up the appointment but I couldn’t afford the purifier and I’m really hoping it helps.
+
