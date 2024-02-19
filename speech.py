@@ -16,12 +16,8 @@ client = OpenAI(api_key=api_key)
 #outputs mp3 of text to speech
 # voice types: Alloy, Echo, Fable, Onyx, Nova, Shimmer
 def textToSpeech(text: str, voice: str, filename: str):
+    print("Generating Audio...")
 
-    response = client.audio.speech.create(
-    model="tts-1",
-    voice = voice,
-    input = text
-    )
-
+    response = client.audio.speech.create(model="tts-1",voice = voice, input = text)
     response.stream_to_file(filename)
 
