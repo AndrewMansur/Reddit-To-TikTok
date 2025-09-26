@@ -1,7 +1,6 @@
-boto3
-praw
-random
-openai
-PIL
-python-dotenv
-os
+praw==7.7.1
+ffmpeg-python==0.2.0
+Pillow==10.4.0
+assemblyai==0.33.0
+boto3==1.35.24
+python-dotenv==1.0.1

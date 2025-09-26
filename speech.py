@@ -1,23 +1,40 @@
+import boto3
 from pathlib import Path
-from openai import OpenAI
 from dotenv import load_dotenv
 import os
 
-
-
+# Load environment variables from .env file
 load_dotenv()
 
-# Access the API key
-api_key = os.getenv("OPENAI_API_KEY")
+def text_to_speech(text: str, voice: str, output_path: Path) -> None:
+    # Convert text to speech using AWS Polly and save as MP3
+    print(f"Generating audio for: {text[:30]}...")
+    access_key = os.getenv("AWS_ACCESS_KEY_ID")
+    secret_key = os.getenv("AWS_SECRET_ACCESS_KEY")
+    if not (access_key and secret_key):
+        raise ValueError("AWS credentials not found in environment variables")
 
-# Initialize the OpenAI client with the API key
-client = OpenAI(api_key=api_key)
+    try:
+        # Initialize AWS Polly client
+        polly_client = boto3.Session(
+            aws_access_key_id=access_key,
+            aws_secret_access_key=secret_key,
+            region_name="us-west-2"
+        ).client("polly")
 
-#outputs mp3 of text to speech
-# voice types: Alloy, Echo, Fable, Onyx, Nova, Shimmer
-def textToSpeech(text: str, voice: str, filename: str):
-    print("Generating Audio...")
+        # Synthesize speech
+        response = polly_client.synthesize_speech(
+            VoiceId=voice,
+            OutputFormat="mp3",
+            Text=text,
+            Engine="standard"
+        )
 
-    response = client.audio.speech.create(model="tts-1",voice = voice, input = text)
-    response.stream_to_file(filename)
-
+        # Ensure output directory exists
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        # Save audio to file
+        with output_path.open("wb") as file:
+            file.write(response["AudioStream"].read())
+    except Exception as e:
+        print(f"Error generating audio: {str(e)}")
+        raise
