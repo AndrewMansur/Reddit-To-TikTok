@@ -30,8 +30,8 @@ Watch a sample output video: [Sample TikTok Video](https://example.com/sample-vi
 ## Setup
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/TikTok-Automation.git
-   cd TikTok-Automation
+   git clone https://github.com/yourusername/Reddit-To-Tiktok.git
+   cd Reddit-To-Tiktok
  2. **Install Python Dependencies:**
     ```bash
     pip install -r requirements.txt`
