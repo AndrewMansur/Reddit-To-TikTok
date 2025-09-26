@@ -1,5 +1,5 @@
 
-# TikTok Automation
+# Reddit To TikTok
 
 ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
 
