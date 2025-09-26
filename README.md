@@ -69,11 +69,11 @@ ASSEMBLYAI_API_KEY=your_assemblyai_api_key
 5. **Prepare Assets**:
 - Place the following files in their respective directories:
 	- `assets/Video/Minecraft.mp4`: A gameplay video (e.g., Minecraft clip).
-	- assets/Images/ProfilePicture.jpeg: A profile image (e.g., 100x100 pixels).
-	- assets/Images/PostTemplate.png: A blank template (e.g., 1080x1920 pixels).
-	-  assets/Images/Mask.png: A circular mask image (e.g., 170x170 pixels).
-	-  assets/Images/Verified.png: A verified badge icon (e.g., 50x50 pixels).
-	- assets/Fonts/Kanit-Medium.ttf: Kanit Medium font from [Google Fonts](https://fonts.google.com/specimen/Kanit).
+	- `assets/Images/ProfilePicture.jpeg`: A profile image (e.g., 100x100 pixels).
+	- `assets/Images/PostTemplate.png`: A blank template (e.g., 1080x1920 pixels).
+	- `assets/Images/Mask.png`: A circular mask image (e.g., 170x170 pixels).
+	- `assets/Images/Verified.png`: A verified badge icon (e.g., 50x50 pixels).
+	- `assets/Fonts/Kanit-Medium.ttf`: Kanit Medium font from [Google Fonts](https://fonts.google.com/specimen/Kanit).
 
 - Missing files will cause a FileNotFoundError. Download sample assets or create placeholders as needed
 
