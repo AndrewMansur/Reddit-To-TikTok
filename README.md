@@ -14,8 +14,8 @@ A Python-based automation tool that creates TikTok videos by scraping Reddit pos
 - Modular design with clean code following PEP 8 conventions.
 
 ## Demo
-Watch a sample output video: [Sample TikTok Video]([https://example.com/sample-video.mp4](https://youtube.com/shorts/HWlSvb_jRVc))
-*Note: Replace the link with a hosted video (e.g., Google Drive, YouTube) or include a screenshot in the repo.*
+Watch a sample output video: [Sample TikTok Video](https://example.com/sample-video.mp4](https://youtube.com/shorts/HWlSvb_jRVc))
+
 
 ## Prerequisites
 - **Python**: 3.8 or higher
